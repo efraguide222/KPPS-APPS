@@ -1,0 +1,36 @@
+============== PENDAFTARAN ANGGOTA KPPS ========================
+- Framework           = codeigniter 4.4.7
+- Language            = (HTML5, CSS3, PHP(8.2), Bootstrap5.3)
+- Author/Team/Credits = Ilham (BE) / Erlangga (FE) / Ardhi (QA)
+
+
+++ SKEMA ++
+
+~ ~ ~ ~ Sistem Perdana ~ ~ ~ ~
+
+* Sistem login+logout User (Email, Password)
+* Sistem Daftar User (Email, Nama lengkap, Nomor Hp, alamat, Password)
+
+~ ~ ~ ~ Sistem Utama ~ ~ ~ ~ ~
+
+** Sistem Pendataan Calon Peserta Tes Anggota KPPS ((Data diri: Nama Lengkap, NIK, Alamat(Api Kota Indonesia), Agama, Nama Ibu Kandung, Nomor Hp, Foto(tidak lebih dari 1 mb), Kelamin
+Pendidikan Terakhir (Minimal SLTA/SEDERAJAT), Pekerjaan Saat ini, Hobi ))
+
+** Sistem Limit Peserta Tes Anggota KPPS (38 Peserta)
+
+** Sistem Soal Ujian 10 Soal otomatis / manual berdasarkan tanggal ujian
+- 7 Soal Kewarganegaraan
+- 3 Soal Psikologi 
+
+(15 Menit Maks)
+
+~ ~ ~ ~ Sistem Akhir ~ ~ ~ ~ ~
+
+*** Perhitungan nilai peserta berdasarkan nilai rata - rata Tertinggi (70-100) Terendah (70 kebawah) -> *Output* Tabel Hasil nilai Kelulusan 
+
+*** Pencetakan hasil kelulusan Pendaftaran
+
+*** Pengumuman Penempatan Dinas (Jika Lulus) *Wajib membawa kertas cetakan hasil kelulusan ke dinas penempatan*
+ 
+
+================================================================
