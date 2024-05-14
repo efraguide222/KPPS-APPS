@@ -13,11 +13,17 @@
         <div class="col-md-6 col-md-offset-3">
             <h2 class="text-center">FORM REGISTER USER</h3>
             <hr>
-            @if(session('message'))
-            <div class="alert alert-success">
-                {{session('message')}}
-            </div>
-            @endif
+    @if (Session::has('message'))
+        <div class="alert alert-success">
+            {{ Session::get('message') }}
+        </div>
+    @endif
+
+    @if (Session::has('error'))
+        <div class="alert alert-danger">
+            {{ Session::get('error') }}
+        </div>
+    @endif
             <form action="{{route('actionregister')}}" method="post">
             @csrf
                 <div class="form-group">

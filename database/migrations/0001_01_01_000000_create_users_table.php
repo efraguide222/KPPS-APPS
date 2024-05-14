@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('verify_key', 100)->unique();
             $table->string('role')->default('user');
+            $table->integer('active');
             $table->rememberToken();
             $table->timestamps();
         });

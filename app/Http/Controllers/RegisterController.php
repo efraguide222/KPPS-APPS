@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
-use Session;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use App\Mail\MailSend;
+use Carbon\Carbon;
+
 
 class RegisterController extends Controller
 {
@@ -26,14 +28,16 @@ class RegisterController extends Controller
             'username' => $request->username,
             'password' => Hash::make($request->password),
             'role' => $request->role,
-            'verify_key' => $str
+            'verify_key' => $str,
+            'active' => 1
         ]);
 
+        $mytime = Carbon::now();
         $details = [
             'username' => $request->username,
             'role' => $request->role,
-            'website' => '',
-            'datetime' => date('Y-m-d H:i:s'),
+            'website' => 'kpps-apps',
+            'datetime' => $mytime->toDateTimeString(),
             'url' => request()->getHttpHost().'/register/verify/'.$str
         ];
 
